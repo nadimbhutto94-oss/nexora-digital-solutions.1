@@ -1,0 +1,75 @@
+/*
+Theme Name: Nexora Digital Child
+Theme URI: https://example.com/nexora-digital
+Description: A polished, responsive child theme for the Twenty Twenty-Four WordPress theme.
+Author: Nexora Digital Solutions
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+Template: twentytwentyfour
+Text Domain: nexora-digital-child
+*/
+
+/* Brand system */
+:root {
+  --nexora-ink: #101c35;
+  --nexora-blue: #183b68;
+  --nexora-gold: #d6a84f;
+  --nexora-cream: #f7f5f0;
+  --nexora-muted: #667085;
+  --nexora-radius: 18px;
+}
+body {
+  color: var(--nexora-ink);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+a { text-underline-offset: 4px; }
+.wp-site-blocks { padding-top: 0; }
+.wp-block-site-title a { color: var(--nexora-ink); text-decoration: none; font-weight: 800; letter-spacing: -.04em; }
+.wp-block-navigation a { font-weight: 600; text-decoration: none; }
+.wp-block-button__link, .nexora-button {
+  background: var(--nexora-gold);
+  border: 1px solid var(--nexora-gold);
+  border-radius: 999px;
+  color: var(--nexora-ink);
+  font-weight: 750;
+  padding: 13px 24px;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease;
+}
+.wp-block-button__link:hover, .nexora-button:hover { background: #e5bd6d; color: var(--nexora-ink); transform: translateY(-2px); }
+.wp-block-post-title, h1, h2, h3 { letter-spacing: -.035em; line-height: 1.15; }
+.wp-block-post-content a { color: var(--nexora-blue); }
+.nexora-wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.nexora-hero {
+  background: radial-gradient(circle at 85% 15%, rgba(214,168,79,.22), transparent 28%), linear-gradient(135deg, #101c35 0%, #183b68 72%, #24517c 100%);
+  color: #fff; padding: clamp(72px, 10vw, 132px) 0;
+}
+.nexora-hero h1 { font-size: clamp(2.7rem, 6vw, 5.1rem); max-width: 800px; margin: 16px 0 22px; }
+.nexora-hero p { color: #e0e8f2; max-width: 680px; font-size: 1.12rem; }
+.nexora-eyebrow { color: var(--nexora-gold); font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.nexora-section { padding: 78px 0; }
+.nexora-section--cream { background: var(--nexora-cream); }
+.nexora-section h2 { font-size: clamp(2rem, 4vw, 3.2rem); max-width: 760px; }
+.nexora-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 34px; }
+.nexora-card { background: #fff; border: 1px solid #e7eaf0; border-radius: var(--nexora-radius); padding: 28px; box-shadow: 0 12px 35px rgba(16,28,53,.05); }
+.nexora-card .nexora-number { color: var(--nexora-gold); font-size: 1.7rem; font-weight: 850; }
+.nexora-card h3 { font-size: 1.3rem; margin: 14px 0 10px; }
+.nexora-card p { color: var(--nexora-muted); margin-bottom: 0; }
+.nexora-band { background: var(--nexora-ink); color: #fff; border-radius: 24px; padding: clamp(28px, 5vw, 54px); display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.nexora-band h2 { margin: 0 0 12px; }
+.nexora-band p { color: #d7deea; margin: 0; }
+.nexora-footer { background: #0b1428; color: #d7deea; padding: 34px 0; font-size: .92rem; }
+.nexora-footer a { color: #fff; }
+.nexora-page { padding: 64px 0 90px; }
+.nexora-page h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+.nexora-contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px; margin-top: 32px; }
+.nexora-contact-panel { background: var(--nexora-cream); border-radius: var(--nexora-radius); padding: 28px; }
+@media (max-width: 760px) {
+  .nexora-grid { grid-template-columns: 1fr; }
+  .nexora-band { align-items: flex-start; flex-direction: column; }
+  .nexora-contact-grid { grid-template-columns: 1fr; }
+  .nexora-section { padding: 56px 0; }
+}
